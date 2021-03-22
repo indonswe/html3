@@ -28,7 +28,7 @@ public class Home {
     @GetMapping("/contactlist")
     public String contactList(Model model) {
         model.addAttribute(inputString);
-        return "contactlist";
+        return null;
     }
 
 
