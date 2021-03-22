@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
+
 <body>
 
+<div class="container">
+<form th:action="@{/contact}" method=post">
+    <div class="form-group">
+        <label>Text input:</label>
+        <input class="form-control" type="text" id="text" name="text" placeholder="Input some text...">
+
+    </div>
+    <input class="btn btn-success" type="submit" value="Submit"/>
+</form>
+</div>
 </body>
 </html>

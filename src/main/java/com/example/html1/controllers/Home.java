@@ -10,7 +10,7 @@ public class Home {
         return null;
     }
     @GetMapping("/contact ")
-    public String contact(){
-        return null;
+    public String contact(String string){
+        return string;
     }
 }
