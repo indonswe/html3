@@ -16,24 +16,22 @@ public class Home {
     public String index(){
         return "index";
     }
-    @GetMapping("/contact ")
+    @GetMapping("/contact")
     public String contact(){
         return "contact";
     }
-    @PostMapping("/contact ")
-    public String contact(@RequestParam String string){
-        inputString.add(string);
+    @PostMapping("/contact")
+    public String contact(@RequestParam String name) {
+        inputString.add(name);
         return "contact";
     }
     @GetMapping("/contactlist")
     public String contactList(Model model) {
-        model.addAttribute("contactList", inputString);
+        model.addAttribute("inputString", inputString);
         return "contactList";
     }
     @GetMapping("/about")
     public String about(){
         return "about";
     }
-
-
 }
