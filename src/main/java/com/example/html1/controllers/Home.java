@@ -34,13 +34,4 @@ public class Home {
     public String about(){
         return "about";
     }
-    @GetMapping("/fever")
-    public String fever(){
-        return "fever";
-    }
-    @PostMapping("/fever")
-    public String fever(@RequestParam String name) {
-        inputString.add(name);
-        return "fever";
-    }
 }
