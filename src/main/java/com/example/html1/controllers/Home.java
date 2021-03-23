@@ -14,21 +14,25 @@ public class Home {
     List<String> inputString = new ArrayList<>();
     @GetMapping("/index")
     public String index(){
-        return null;
+        return "index";
     }
     @GetMapping("/contact ")
     public String contact(){
-        return null;
+        return "contact";
     }
     @PostMapping("/contact ")
     public String contact(@RequestParam String string){
         inputString.add(string);
-        return string;
+        return "contact";
     }
     @GetMapping("/contactlist")
     public String contactList(Model model) {
-        model.addAttribute(inputString);
-        return null;
+        model.addAttribute("contactList", inputString);
+        return "contactList";
+    }
+    @GetMapping("/about")
+    public String about(){
+        return "about";
     }
 
 
