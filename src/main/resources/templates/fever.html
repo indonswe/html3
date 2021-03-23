@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>fever</title>
+</head>
+<body>
+<form th:action="@{/contact}" method="post">
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" />
+
+
+    <input class="btn btn-success" type="submit" value="Submit" placeholder="Enter a message..."/>
+    <!--div class="form-group">
+        <label>Message:</label>
+        <input class="form-control" type="text" id="message" name="message" placeholder="Enter a message...">
+    </div>
+<input type="submit" value="Submit" />
+    <input class="btn btn-success" type="submit" value="Submit"/>
+</form!-->
+
+</form>
+</body>
+</html>
