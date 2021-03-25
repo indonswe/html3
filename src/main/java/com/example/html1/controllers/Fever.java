@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Fever {
 
     String answer;
+    String fix;
 
     @GetMapping("/fever")
     public String fever(){
@@ -25,12 +26,20 @@ public class Fever {
         } else {
             answer = "Normal";
         }
+        if (tem > 37.3){
+            fix = "Icebath";
+        } else if (tem < 35.3) {
+            fix = "Sauna";
+        } else {
+            fix = "";
+        }
         return "redirect:/answer";
         //return "fever";
     }
     @GetMapping("/answer")
     public String answer(Model model) {
         model.addAttribute("answer", answer);
+        model.addAttribute("answer", fix);
         return "answer";
     }
 }
