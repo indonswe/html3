@@ -25,8 +25,8 @@ public class Fever {
         } else {
             answer = "Normal";
         }
-        //return "redirect:/answer";
-        return "fever";
+        return "redirect:/answer";
+        //return "fever";
     }
     @GetMapping("/answer")
     public String answer(Model model) {
